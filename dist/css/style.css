@@ -1,0 +1,37 @@
+.tabuleiro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  height: 600px;
+  width: 600px;
+  margin: 170px auto;
+  background-color: #5b2d23;
+}
+
+.tabuleiro li {
+border-radius: 5px;
+  padding: 60px;
+  height: 66px;
+  width: 66px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #21FFED;
+}
+
+.jogador_2 {
+  background-image: url(../img/circulo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jogador_1 {
+  background-image: url(../img/xis.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.invisivel{
+  display: none;
+}
+
