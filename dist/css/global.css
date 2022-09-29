@@ -1,3 +1,4 @@
 body{
-  background-color: #5b2d23;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--azul);
 }

@@ -6,19 +6,72 @@
   height: 100%;
   top: 0;
   background-color: rgba(0, 0, 0, 0.748);
-  padding: 20px;
+  
 }
 
 .modal_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   float: left;
   z-index: 99;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--azul);
  
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  margin: 0 45% ;
+ 
 }
 
 
+.escolha{
+  font-size: 2rem;
+  color: var(--laranja-preto);
+  font-weight: 600;
+}
+.modal_escolha{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.escolha_jogador{
+  font-size: 7rem;
+  font-weight: 500;
+  color: var(--laranja-preto);
+}
+.modal_button{
+  display: flex;
+  
+}
+
+
+.start_game{
+  justify-self: flex-end;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--laranja-claro);
+  color: var(--laranja-preto);
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: transparent;
+  height: 7%;
+  transition: 0.3s;
+}
+
+.start_game:hover{
+  background-color: var(--laranja-claro);
+}
+.detalhe{
+  content: "";
+  position: relative;
+  width: 20px;
+  height: 5px;
+  background-color: var(--laranja-preto);
+  top: 62%;
+  right: -48%;
+  border-radius: 2px;
+}

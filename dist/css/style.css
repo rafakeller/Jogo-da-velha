@@ -1,37 +1,93 @@
+:root {
+  --laranja-escuro: #662900;
+  --laranja: #b34700;
+  --laranja-claro: #d9702b;
+  --azul: #00a9b3;
+  --azul-claro: #19f4ff;
+  --azul-escuro: #006166;
+  --laranja-preto: #250f00;
+  --X: url(../img/xis.svg);
+  --O: url(../img/circulo.svg);
+}
+
 .tabuleiro {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
   height: 600px;
   width: 600px;
-  margin: 170px auto;
-  background-color: #5b2d23;
+  margin: 0 auto;
+  background-color: var(--azul);
 }
 
 .tabuleiro li {
-border-radius: 5px;
+  border-radius: 5px;
   padding: 60px;
   height: 66px;
   width: 66px;
   margin: 0 auto;
   cursor: pointer;
-  background-color: #21FFED;
-}
-
-.jogador_2 {
-  background-image: url(../img/circulo.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--laranja);
 }
 
 .jogador_1 {
-  background-image: url(../img/xis.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+.jogador_1.X {
+  background-image: var(--X);
+}
+.jogador_1.Circle {
+  background-image: var(--O);
+}
 
-.invisivel{
+.jogador_2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jogador_2.Circle{
+  background-image: var(--O);
+}
+
+.jogador_2.X {
+  background-image: var(--X);
+}
+
+.invisivel {
   display: none;
 }
 
+.bolinha {
+  background-image: url(/dist/img/circulo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  height: 130px;
+  width: 130px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 5px solid transparent;
+  border: transparent;
+  background-color: var(--laranja);
+  transition: 0.3s;
+}
+.xis {
+  background-image: url(/dist/img/xis.svg);
+  background-size: cover;
+  border-radius: 5px;
+  height: 130px;
+  width: 130px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 5px solid transparent;
+  background-color: var(--laranja);
+  transition: 0.3s;
+}
+
+.bolinha:hover {
+  border: 5px solid var(--azul-claro);
+}
+.xis:hover {
+  border: 5px solid var(--azul-claro);
+}
