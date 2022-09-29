@@ -1,5 +1,6 @@
 "use strict";
 import { casa_tabuleiro } from "../app.js";
+import { verificaEmpate } from "./verificaEmpate.js";
 
 const verificaSeGanhou = (jogador, listaIndicesTabuleiro) => {
   
@@ -7,16 +8,25 @@ const verificaSeGanhou = (jogador, listaIndicesTabuleiro) => {
   const verifInd1 = casa_tabuleiro[listaIndicesTabuleiro[1]].classList[1];
   const verifInd2 = casa_tabuleiro[listaIndicesTabuleiro[2]].classList[1];
 
-  const modalVitoria = document.querySelector('.modal');
+  const modalResultado = document.querySelector('.modal');
 
-  const mensagemVitoria = document.querySelector('.modal_message');
+  const mensagemResultado = document.querySelector('.modal_message');
 
   if (verifInd0 === jogador && verifInd1 === jogador && verifInd2 === jogador) {
 
-    mensagemVitoria.innerHTML = `${jogador[0].toUpperCase() + jogador.substr(1).replace("_", " ")} ganhou`;
+    mensagemResultado.innerHTML = `${jogador[0].toUpperCase() + jogador.substr(1).replace("_", " ")} ganhou`;
 
-    modalVitoria.classList.remove('invisivel');
+    modalResultado.classList.remove('invisivel');
   }
+
+  let empate = verificaEmpate();
+
+  if(empate === true){
+    mensagemResultado.innerHTML = "Empate!";
+
+    modalResultado.classList.remove('invisivel');
+  }
+  
   
 };
 
@@ -30,7 +40,9 @@ export const verificaIndices = (jogador)=> {
   const [ind1,ind2,ind3,ind4,ind5,ind6,ind7,ind8] = indVic;
   //////////////////////////
   const mapInd = new Map();
+  
   const Inds = [ind1,ind2,ind3,ind4,ind5,ind6,ind7,ind8];
+
   for (let i = 0; i < Inds.length; i++) {
     const el = Inds[i];
     mapInd.set(`ind${i+1}`,el);

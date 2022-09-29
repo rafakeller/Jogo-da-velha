@@ -13,14 +13,13 @@ export const verificaEmpate = () => {
     const segundaClasseEmpate = casa_tabuleiro[i].classList[1];
 
     array_segundaClasse.push(segundaClasseEmpate);
-
-    
   }
 
-  console.log(array_segundaClasse);
   let verificaSegundaClasse = array_segundaClasse.every(empatou);
 
   if (verificaSegundaClasse === true) {
-    alert("empate!");
+    return true;
+  } else {
+    return false;
   }
 };

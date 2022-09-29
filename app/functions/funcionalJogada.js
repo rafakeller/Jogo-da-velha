@@ -4,11 +4,12 @@ import { ativarTimer } from "../../service/ativarTimer.js";
 import { limparTimer } from "../../service/limparTimer.js";
 import { arrayParam, casa_tabuleiro } from "../app.js";
 import { jogada } from "./jogada.js";
-import { verificaEmpate } from "./verificaEmpate.js";
-import { verificaIndices } from "./verificaVitoria.js";
+import { verificaIndices } from "./verificaIndices.js";
 
 export const funcionalJogada = (casa, id) => {
+
   const jogador = casa.parentNode.getAttribute("id");
+
   const segundaClasse = casa_tabuleiro[id].classList[1];
 
   //a cada click vai ativar a função jogada, limpar o timer de 15s e ativa-lo no mesmo instante
@@ -21,5 +22,4 @@ export const funcionalJogada = (casa, id) => {
   }
 
   verificaIndices(jogador);
-  verificaEmpate();
 };

@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css" />
   <title>Jogo da Velha</title>
 </head>
@@ -12,21 +15,18 @@
 <body>
 
   <section>
-    <div>
-      <div data-vez-jogador></div>
+    <div class="vez_jogador_content">
+      <div class="vez_jogador" data-vez-jogador></div>
+      <input class="valorVezJogador" type="hidden">
+      <div class="vez_jogador2"></div>
       <input class="valorVezJogador" type="hidden">
     </div>
-    <div data-timer></div>
+
+
+
+
     <ul class="tabuleiro" id="jogador_1">
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
-      <li class="casa_tabuleiro"></li>
+
     </ul>
   </section>
 
@@ -34,10 +34,23 @@
 
     <div class="modal_content">
       <h6 class="modal_message"></h6>
-      <button data-start-game>Novo Jogo</button>
+
+      <h2 class="escolha">Escolha sua peça!</h2>
+      <div class="modal_escolha">
+        <span class="detalhe"></span>
+        <h1 class="escolha_jogador">Jogador 1</h1>
+
+        <div class="modal_button">
+          <button class="bolinha" data-switch></button>
+          <button class="xis" data-switch></button>
+        </div>
+      </div>
+
+      <button class="start_game" data-start-game>Reiniciar jogo</button>
     </div>
 
   </div>
+  <div class="timer" data-timer></div>
   <script type="module" src="./app/app.js"></script>
 </body>
 

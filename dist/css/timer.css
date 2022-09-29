@@ -1,0 +1,7 @@
+.timer{
+  font-size: 2rem;
+  text-align: center;
+  color: var(--laranja-preto);
+  vertical-align: sub;
+  margin-top: 10px;
+}
