@@ -1,0 +1,32 @@
+.vez_jogador_content{
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+  align-content: end;
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.vez_jogador{
+  color: var(--laranja-preto);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: left;
+  background-color: var(--azul-claro);
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  
+}
+
+
+
+.vez_jogador2{
+  color: var(--laranja-preto);
+  font-size: 1.5rem;
+  text-align: left;
+  background-color: var(--azul-claro);
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+}
