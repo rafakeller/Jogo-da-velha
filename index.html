@@ -5,52 +5,49 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="dist/style.css" />
+  <link rel="stylesheet" href="dist/css/resultado.css">
   <title>Jogo da Velha</title>
 </head>
 
 <body>
 
-  <section>
-    <div class="vez_jogador_content">
-      <div class="vez_jogador" data-vez-jogador></div>
-      <input class="valorVezJogador" type="hidden">
-      <div class="vez_jogador2"></div>
-      <input class="valorVezJogador" type="hidden">
+  <section class="main">
+
+    <div class="vez_jogador" data-vez-jogador></div>
+    <input class="valorVezJogador" type="hidden">
+
+    <div class="placar_jogador_content">
+      <div class="placar_jogador" data-jogador1Placar>Jogador 1</div>
+      <div class="placar_jogador" data-jogador2Placar>Jogador 2</div>
     </div>
-
-
 
 
     <ul class="tabuleiro" id="jogador_1">
-
     </ul>
   </section>
 
-  <div class="modal modal_background">
+  <section class="modal modal_background">
 
-    <div class="modal_content">
-      <h6 class="modal_message"></h6>
+    <article class="modal_content">
 
-      <h2 class="escolha">Escolha sua peça!</h2>
-      <div class="modal_escolha">
-        <span class="detalhe"></span>
-        <h1 class="escolha_jogador">Jogador 1</h1>
+      <!--Aplicar o componente da tela de resultados-->
+      <h1 class="modal_message"></h1>
+      <!---->
+      <div class="modal_ganhador">
+        <h2 class="vencedor">VENCEDOR!</h2>
+        <div class="modal_ganhador_image"></div>
 
-        <div class="modal_button">
-          <button class="bolinha" data-switch></button>
-          <button class="xis" data-switch></button>
-        </div>
       </div>
 
       <button class="start_game" data-start-game>Reiniciar jogo</button>
-    </div>
+    </article>
 
-  </div>
+  </section>
+
   <div class="timer" data-timer></div>
+  
   <script type="module" src="./app/app.js"></script>
 </body>
 

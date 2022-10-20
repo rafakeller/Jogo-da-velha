@@ -12,7 +12,6 @@ export const funcionalJogada = (casa, id) => {
 
   const segundaClasse = casa_tabuleiro[id].classList[1];
 
-  //a cada click vai ativar a função jogada, limpar o timer de 15s e ativa-lo no mesmo instante
   if (segundaClasse === undefined) {
     jogada(id, jogador, casa_tabuleiro);
     limparTimer(arrayParam);
@@ -23,3 +22,5 @@ export const funcionalJogada = (casa, id) => {
 
   verificaIndices(jogador);
 };
+
+//Verifica se o campo clicado já tem uma peça, se não tiver, ele vai executar a jogada, se tiver ele vai emitir um alert

@@ -1,0 +1,32 @@
+.modal_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.modal_message{
+  color: var(--laranja-claro);
+  font-weight: 500;
+  font-size: 2rem;
+  
+}
+.vencedor{
+  color: var(--laranja-escuro);
+  font-weight: 700;
+  font-size: 6rem;
+}
+.modal_ganhador{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+
+}
+.modal_ganhador_image{
+  background-image: url(../img/circulo.svg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3rem;
+  background-size: 180px;
+  height: 10rem;
+ 
+}

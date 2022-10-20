@@ -13,3 +13,4 @@ export const restartGame = (limparTimer) => {
   });
   limparTimer(arrayParam);
 };
+//remove as classas de cada casa, fazendo tudo ficar vazio após ter preenchido todas

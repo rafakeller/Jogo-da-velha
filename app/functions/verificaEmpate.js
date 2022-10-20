@@ -23,3 +23,4 @@ export const verificaEmpate = () => {
     return false;
   }
 };
+//Faz adicionar a segunda classe das casas em uma array, se depois de adicionado 9 classes TODAS ELAS(EVERY)forem diferentes de "underfined" então a função é true

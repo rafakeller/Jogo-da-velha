@@ -1,4 +1,4 @@
-.vez_jogador_content{
+.placar_jogador_content{
   display: flex;
   gap: 90px;
   justify-content: center;
@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 }
 
-.vez_jogador{
+.placar_jogador{
   color: var(--laranja-preto);
   font-size: 1.5rem;
   font-weight: 800;
@@ -20,13 +20,6 @@
 }
 
 
-
-.vez_jogador2{
-  color: var(--laranja-preto);
-  font-size: 1.5rem;
-  text-align: left;
-  background-color: var(--azul-claro);
-  width: 250px;
-  height: 60px;
-  border-radius: 5px;
+.border_vez {
+  border: solid 4px white;
 }

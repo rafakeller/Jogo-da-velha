@@ -1,7 +1,7 @@
 .timer{
-  font-size: 2rem;
-  text-align: center;
   color: var(--laranja-preto);
-  vertical-align: sub;
+  font-size: 2rem;
   margin-top: 10px;
+  text-align: center;
+  vertical-align: sub;
 }

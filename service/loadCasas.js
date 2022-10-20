@@ -11,3 +11,5 @@ export const loadCasas = ()=> {
     itens++;
   } 
 }
+
+//Redenriza o jogo da velha na tela atrávez do createElement

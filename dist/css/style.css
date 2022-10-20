@@ -35,10 +35,10 @@
   background-size: cover;
 }
 .jogador_1.X {
-  background-image: var(--X);
+  background-image: var(--X) !important;
 }
 .jogador_1.Circle {
-  background-image: var(--O);
+  background-image: var(--O) !important;
 }
 
 .jogador_2 {
@@ -46,22 +46,22 @@
   background-size: cover;
 }
 .jogador_2.Circle{
-  background-image: var(--O);
+  background-image: var(--O) !important;
 }
 
 .jogador_2.X {
-  background-image: var(--X);
+  background-image: var(--X) !important;
 }
 
 .invisivel {
   display: none;
 }
 
-.bolinha {
-  background-image: url(/dist/img/circulo.svg);
+.bolinhaBotao {
+  background-image: url(../img/circulo.svg);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 5px;
   height: 130px;
   width: 130px;
@@ -72,8 +72,8 @@
   background-color: var(--laranja);
   transition: 0.3s;
 }
-.xis {
-  background-image: url(/dist/img/xis.svg);
+.xisBotao {
+  background-image: url(../img/xis.svg);
   background-size: cover;
   border-radius: 5px;
   height: 130px;

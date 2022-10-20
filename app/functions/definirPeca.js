@@ -15,7 +15,7 @@ export const definirPeca = () => {
   const jogador2 = "jogador_2";
 
   buttonSwitch.forEach((Switch, id) => {
-    Switch.addEventListener("click", (event) => {
+    Switch.addEventListener("click", () => {
       const classSwitch = buttonSwitch[id].classList[0];
       if (classSwitch === "xis") {
         mapSwitch.set(jogador1, X);
@@ -27,9 +27,10 @@ export const definirPeca = () => {
 
       restartGame(limparTimer);
       closeModal();
-
     });
   });
 };
-
-//map = vincula um texto a uma variavel (set) e podemos buscar a variavel com esse mesmo texto (get)
+//Se o botão clicado for x então x vai ser setado dentro de jogador 1, e se for bola então bola vai ser setado dentro de jogador 1
+//map = vincula um texto a uma variavel (set) e podemos buscar a variavel com esse mesmo texto (get), chave - valor
+//Apartir do momento de clique na peça escolhida o jogo inicia, dando "restart game" e "fechando o modal"
+//
