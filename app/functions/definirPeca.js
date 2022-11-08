@@ -17,13 +17,14 @@ export const definirPeca = () => {
   buttonSwitch.forEach((Switch, id) => {
     Switch.addEventListener("click", () => {
       const classSwitch = buttonSwitch[id].classList[0];
-      if (classSwitch === "xis") {
+      if (classSwitch === "xisSwitch") {
         mapSwitch.set(jogador1, X);
         mapSwitch.set(jogador2, circle);
       } else {
         mapSwitch.set(jogador1, circle);
         mapSwitch.set(jogador2, X);
       }
+      mapSwitch.set("empate", "draw");
 
       restartGame(limparTimer);
       closeModal();

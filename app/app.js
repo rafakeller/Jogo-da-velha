@@ -1,9 +1,5 @@
 "use strict";
 
-import { limparTimer } from "../service/limparTimer.js";
-import { ativarTimer } from "../service/ativarTimer.js";
-import { fechaModal } from "./functions/modal.js";
-import { restartGame } from "./functions/restartGame.js";
 import { funcionalJogada } from "./functions/funcionalJogada.js";
 import { loadCasas } from "../service/loadCasas.js";
 import { definirPeca } from "./functions/definirPeca.js";
@@ -49,13 +45,13 @@ timer.innerHTML = tempo;
 export const arrayParam = { tempo, timer, intervalo, temporizador }; //objeto
 
 //Ativa o cronômetro interno de 5s antes de qualquer jogada no ínicio
-export const botaoInicia = document.querySelector("[data-start-game]");
+/*export const botaoInicia = document.querySelector("[data-start-game]");
 
 botaoInicia.addEventListener("click", (event) => {
   fechaModal(event);
   restartGame(limparTimer);
   ativarTimer(arrayParam);
-});
+});*/
 
 
 casa_tabuleiro.forEach((casa, id) => {

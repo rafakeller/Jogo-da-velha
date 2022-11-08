@@ -8,7 +8,7 @@ export const SwitchView =  ()=>{
   return `<article class="modal_content">
 
             <!--Aplicar o componente da tela de resultados-->
-            <h6 class="modal_message" ></h6>
+            
             <!---->
             <h1 class="escolha">Escolha sua peça!</h1>
             <div class="modal_escolha">
@@ -16,12 +16,11 @@ export const SwitchView =  ()=>{
               <h2 class="escolha_jogador">Jogador 1</h2>
 
               <div class="modal_button">
-                <button class="bolinhaBotao" data-switch></button>
-                <button class="xisBotao" data-switch></button>
+                <button class="bolinhaSwitch" data-switch></button>
+                <button class="xisSwitch" data-switch></button>
               </div>
             </div>
 
-            <button class="start_game" data-start-game>Reiniciar jogo</button>
           </article>`;
 }
 //retorna para js esse trecho de código que contem tags que o html reconhece, dessa forma a página de escolha de peça fica visivel

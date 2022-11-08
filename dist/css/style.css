@@ -2,7 +2,7 @@
   --laranja-escuro: #662900;
   --laranja: #b34700;
   --laranja-claro: #d9702b;
-  --azul: #00a9b3;
+  --azul: #00A9B3;
   --azul-claro: #19f4ff;
   --azul-escuro: #006166;
   --laranja-preto: #250f00;
@@ -53,11 +53,16 @@
   background-image: var(--X) !important;
 }
 
+.draw {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/tictactoe.png);
+}
 .invisivel {
   display: none;
 }
 
-.bolinhaBotao {
+.bolinhaSwitch {
   background-image: url(../img/circulo.svg);
   background-size: cover;
   background-position: center;
@@ -72,7 +77,7 @@
   background-color: var(--laranja);
   transition: 0.3s;
 }
-.xisBotao {
+.xisSwitch {
   background-image: url(../img/xis.svg);
   background-size: cover;
   border-radius: 5px;
@@ -85,9 +90,9 @@
   transition: 0.3s;
 }
 
-.bolinha:hover {
+.bolinhaSwitch:hover {
   border: 5px solid var(--azul-claro);
 }
-.xis:hover {
+.xisSwitch:hover {
   border: 5px solid var(--azul-claro);
 }

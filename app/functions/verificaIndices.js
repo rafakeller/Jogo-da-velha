@@ -1,8 +1,14 @@
 "use strict";
+import { limparTimer } from "../../service/limparTimer.js";
 import { casa_tabuleiro } from "../app.js";
 import { resultGame } from "../components/ResultGame.js";
-import { showModal } from "./modal.js";
+import { modal, SwitchView } from "../components/SwitchScreen.js";
+import { definirPeca, mapSwitch } from "./definirPeca.js";
+import { restartGame } from "./restartGame.js";
 import { verificaEmpate } from "./verificaEmpate.js";
+
+const modalResultado = document.querySelector('.modal');
+
 
 const verificaSeGanhou = (jogador, trioIndicesTabuleiro) => {
   
@@ -10,23 +16,19 @@ const verificaSeGanhou = (jogador, trioIndicesTabuleiro) => {
   const verifInd1 = casa_tabuleiro[trioIndicesTabuleiro[1]].classList[1];
   const verifInd2 = casa_tabuleiro[trioIndicesTabuleiro[2]].classList[1];
 
-  const modalResultado = document.querySelector('.modal');
-
+  
   const mensagemResultado = document.querySelector('.modal_message');
 
   if (verifInd0 === jogador && verifInd1 === jogador && verifInd2 === jogador) {
 
-    modalResultado.innerHTML =  resultGame(jogador) ;
-
-    modalResultado.classList.remove('invisivel');
+    loadResult(jogador);
   }
 
   let empate = verificaEmpate();
 
   if(empate === true){
-    mensagemResultado.innerHTML = "Empate!";
     
-    setTimeout(showModal, 1000);
+    loadResult("empate");
     //gera mensagem de empate caso a função verificaEmpate retornar true
   }
   
@@ -58,3 +60,21 @@ export const verificaIndices = (jogador)=> {
 
 //Atribui cada const ind á um trio ([0,1,2])atrávez da atribuição desestruturada
 //Usa um loop for e map para conseguir "enviar" o trio como paramentro para a função verificaSeGanhou
+
+const loadResult = (resultado)=> {
+  modalResultado.innerHTML =  resultGame(resultado);
+  const modalContent = document.querySelector(".modal_content");
+  const buttonRestart = document.createElement("button");
+  buttonRestart.classList.add("start_game");
+  buttonRestart.innerHTML = "Reiniciar Jogo";
+  buttonRestart.addEventListener("click" , ()=> {
+    mapSwitch.clear();
+    restartGame(limparTimer)
+    modal.innerHTML = SwitchView();
+
+    definirPeca();
+  }  );
+  modalContent.appendChild(buttonRestart)
+
+  modalResultado.classList.remove('invisivel');
+}

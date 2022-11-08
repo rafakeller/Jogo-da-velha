@@ -16,7 +16,7 @@ export const tempoJogada = () => {
   //Mudando o valor no painel á cada 5 segundos de acordo com "ativar timer"
   inputVezJogador.value = tabuleiro.getAttribute("id");
 
-  const textoFormatado = `${inputVezJogador.value[0].toUpperCase() + inputVezJogador.value.substr(1).replace("_", " ")}`
+  const textoFormatado = "Vez de " + `${inputVezJogador.value[0].toUpperCase() + inputVezJogador.value.substr(1).replace("_", " ")}`
 
   painelJogador.innerHTML = textoFormatado;
 

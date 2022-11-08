@@ -1,9 +1,9 @@
 .placar_jogador_content{
   display: flex;
-  gap: 90px;
+  gap: 100px;
   justify-content: center;
   align-content: end;
-  margin-top: 150px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 
@@ -13,13 +13,21 @@
   font-weight: 800;
   text-align: left;
   background-color: var(--azul-claro);
-  width: 250px;
-  height: 60px;
+  padding: 10px 60px;
   border-radius: 5px;
-  
+  border: transparent;
 }
 
 
 .border_vez {
   border: solid 4px white;
+}
+
+.vez_jogador{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 80px;
+ 
+
 }

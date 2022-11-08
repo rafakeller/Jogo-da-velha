@@ -3,19 +3,24 @@
 import { mapSwitch } from "../functions/definirPeca.js"
 
 export const resultGame = (ganhador)=> {
+  let tituloResultado = "VENCEDOR!"; 
+  if(ganhador === "empate"){
+    tituloResultado = "EMPATE!";
+  }
+
   return `
     <article class="modal_content">
 
       <!--Aplicar o componente da tela de resultados-->
-      <h1 class="modal_message">${ganhador[0].toUpperCase() + ganhador.substr(1).replace("_", " ")}</h1>
+      
       <!---->
       <div class="modal_ganhador">
-        <h2 class="vencedor">VENCEDOR!</h2>
+        <h2 class="vencedor">${tituloResultado}</h2>
         <div class="modal_ganhador_image ${ganhador} ${mapSwitch.get(ganhador)}"> </div>
 
       </div>
 
-      <button class="start_game" data-start-game>Reiniciar jogo</button>
+      
     </article>
     
   `;

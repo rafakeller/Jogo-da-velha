@@ -22,7 +22,6 @@
 
 }
 .modal_ganhador_image{
-  background-image: url(../img/circulo.svg) !important;
   background-repeat: no-repeat;
   background-position: center;
   padding: 3rem;

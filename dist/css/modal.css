@@ -13,22 +13,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   position: absolute;
   float: left;
   z-index: 99;
   width: 100%;
-  height: 100vh;
   background-color: var(--azul);
- 
+  justify-content: space-between;
  
 }
-
+ .modal_ganhador{
+  margin-top: 300px;
+ }
 
 .escolha{
   font-size: 2rem;
   color: var(--laranja-preto);
   font-weight: 600;
+  margin-top: 170px;
+}
+.modal_button > button:hover{
+  background-color: var(--laranja-claro);
 }
 .modal_escolha{
   display: flex;
@@ -36,7 +40,8 @@
   height: 50%;
   justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 250px;
+  
 }
 .escolha_jogador{
   font-size: 7rem;
@@ -60,6 +65,7 @@
   border: transparent;
   height: 7%;
   transition: 0.3s;
+ 
 }
 
 .start_game:hover{
